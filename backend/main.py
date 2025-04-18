@@ -1,3 +1,5 @@
+from flask import Flask
+from flask_cors import CORS
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -14,11 +16,11 @@ client = OpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
 )
 
-origins = [
+CORS(app, origins=[
     "http://localhost:5173",
     "https://chai-bot-xscn.onrender.com",
     "https://chai-bot-cyan.vercel.app/"
-]
+])
 
 app.add_middleware(
     CORSMiddleware,
