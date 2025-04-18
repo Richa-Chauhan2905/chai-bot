@@ -16,7 +16,8 @@ client = OpenAI(
 
 origins = [
     "http://localhost:5173",
-    "https://chai-bot-xscn.onrender.com"
+    "https://chai-bot-xscn.onrender.com",
+    "https://chai-bot-cyan.vercel.app/"
 ]
 
 app.add_middleware(
